@@ -24,16 +24,18 @@ const Index = () => {
       <main className="container mx-auto mt-8 px-4">
         <section className="mb-16">
           <h1 className="text-5xl font-bold mb-6 text-center text-blue-600">ヒトシゴト事業</h1>
-          <Carousel className="w-full">
+          <Carousel className="w-full relative">
             <CarouselContent>
               {images.map((src, index) => (
                 <CarouselItem key={index}>
-                  <img src={src} alt={`Hito Shigoto ${index + 1}`} className="w-full h-auto object-cover rounded-lg shadow-lg" />
+                  <div className="relative">
+                    <img src={src} alt={`Hito Shigoto ${index + 1}`} className="w-full h-auto object-cover rounded-lg shadow-lg" />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2" />
+            <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2" />
           </Carousel>
           <p className="mt-6 mb-8 text-center text-xl text-gray-600">
             ヒトシゴト事業は、あなたのスキルや経験を活かして収入を増やすチャンスを提供します。
