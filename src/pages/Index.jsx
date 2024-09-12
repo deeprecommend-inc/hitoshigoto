@@ -13,68 +13,63 @@ const Index = () => {
   };
 
   const images = [
-    "https://source.unsplash.com/random/1920x1080?business",
-    "https://source.unsplash.com/random/1920x1080?office",
-    "https://source.unsplash.com/random/1920x1080?meeting",
-    "https://source.unsplash.com/random/1920x1080?teamwork",
+    "/image1.jpg",
+    "/image2.jpg",
+    "/image3.jpg",
+    "/image4.jpg",
+    "/image5.jpg",
+    "/image6.jpg",
+    "/image7.jpg",
+    "/image8.jpg",
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="relative h-screen">
-        <Carousel className="w-full h-full">
-          <CarouselContent>
-            {images.map((src, index) => (
-              <CarouselItem key={index} className="h-full">
-                <div className="relative w-full h-full">
-                  <img src={src} alt={`Hito Shigoto ${index + 1}`} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-5xl font-bold mb-6 text-white">ヒトシゴト事業</h1>
-                      <p className="text-xl text-white mb-8">
-                        あなたのスキルや経験を活かして収入を増やすチャンスを提供します。
-                      </p>
-                      <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                        詳細を見る
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2" />
-          <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2" />
-        </Carousel>
-      </section>
+      <main className="container mx-auto mt-8 px-4">
+        <section className="mb-16">
+          <h1 className="text-5xl font-bold mb-6 text-center text-blue-600">ヒトシゴト事業</h1>
+          <Carousel className="w-full max-w-4xl mx-auto">
+            <CarouselContent>
+              {images.map((src, index) => (
+                <CarouselItem key={index}>
+                  <img src={src} alt={`Hito Shigoto ${index + 1}`} className="w-full h-96 object-cover rounded-lg shadow-lg" />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+          <p className="mt-6 mb-8 text-center text-xl text-gray-600">
+            ヒトシゴト事業は、あなたのスキルや経験を活かして収入を増やすチャンスを提供します。
+          </p>
+        </section>
 
-      <main className="container mx-auto px-4 py-16">
         <section className="mb-16">
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card>
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-blue-600">顧問アドバイザーマッチングサービス</CardTitle>
-                <CardDescription className="text-lg">効率的に収入を増やすチャンス</CardDescription>
+                <CardTitle>顧問アドバイザーマッチングサービス</CardTitle>
+                <CardDescription>効率的に収入を増やすチャンス</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc list-inside mb-4 text-gray-600 space-y-2">
+                <ul className="list-disc list-inside mb-4 text-gray-600">
                   <li>転職は考えていないがもう少し収入を増やしたい</li>
                   <li>空き時間を使って効率よく収入を上げたい</li>
                 </ul>
               </CardContent>
               <CardFooter>
                 <Link to="/advisor-matching">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">詳細を見る</Button>
+                  <Button>詳細を見る</Button>
                 </Link>
               </CardFooter>
             </Card>
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card>
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-blue-600">企業様とアドバイザーマッチングサービス</CardTitle>
-                <CardDescription className="text-lg">貴社のランクアップをお約束</CardDescription>
+                <CardTitle>企業様とアドバイザーマッチングサービス</CardTitle>
+                <CardDescription>貴社のランクアップをお約束</CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc list-inside mb-4 text-gray-600 space-y-2">
+                <ul className="list-disc list-inside mb-4 text-gray-600">
                   <li>自社のこの部門を効率よくしたい</li>
                   <li>良い人材がいればもっと拡大出来るのに</li>
                   <li>ITやSNSでの広告も使ってみたい</li>
@@ -82,7 +77,7 @@ const Index = () => {
               </CardContent>
               <CardFooter>
                 <Link to="/corporate-matching">
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">詳細を見る</Button>
+                  <Button>詳細を見る</Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -90,55 +85,57 @@ const Index = () => {
         </section>
 
         <section className="mb-16">
-          <Card className="bg-white shadow-lg">
+          <Card>
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-blue-600">お問い合わせ</CardTitle>
-              <CardDescription className="text-lg">ご質問やご相談がございましたら、お気軽にお問い合わせください。</CardDescription>
+              <CardTitle>お問い合わせ</CardTitle>
+              <CardDescription>ご質問やご相談がございましたら、お気軽にお問い合わせください。</CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">お名前</label>
-                  <Input type="text" id="name" name="name" className="w-full" required />
+              <form onSubmit={handleSubmit}>
+                <div className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">お名前</label>
+                    <Input type="text" id="name" name="name" className="mt-1" required />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700">メールアドレス</label>
+                    <Input type="email" id="email" name="email" className="mt-1" required />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700">メッセージ</label>
+                    <Textarea id="message" name="message" rows={4} className="mt-1" required />
+                  </div>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
-                  <Input type="email" id="email" name="email" className="w-full" required />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">メッセージ</label>
-                  <Textarea id="message" name="message" rows={4} className="w-full" required />
-                </div>
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white">送信</Button>
+                <Button type="submit" className="mt-4">送信</Button>
               </form>
             </CardContent>
           </Card>
         </section>
       </main>
 
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="container mx-auto px-4">
+      <footer className="bg-gray-800 text-white p-8">
+        <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">ヒトシゴト</h3>
-              <p className="text-gray-300">あなたのスキルと経験を活かす、新しい働き方のプラットフォーム</p>
+              <h3 className="text-xl font-semibold mb-4">ヒトシゴト</h3>
+              <p>あなたのスキルと経験を活かす、新しい働き方のプラットフォーム</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-4">リンク</h3>
+              <h3 className="text-xl font-semibold mb-4">リンク</h3>
               <ul className="space-y-2">
-                <li><Link to="/" className="text-gray-300 hover:text-white transition-colors">ホーム</Link></li>
-                <li><Link to="/advisor-matching" className="text-gray-300 hover:text-white transition-colors">顧問アドバイザー</Link></li>
-                <li><Link to="/corporate-matching" className="text-gray-300 hover:text-white transition-colors">企業様向け</Link></li>
+                <li><Link to="/" className="hover:text-blue-400">ホーム</Link></li>
+                <li><Link to="/advisor-matching" className="hover:text-blue-400">顧問アドバイザー</Link></li>
+                <li><Link to="/corporate-matching" className="hover:text-blue-400">企業様向け</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-4">お問い合わせ</h3>
-              <p className="text-gray-300">お気軽にご連絡ください</p>
-              <p className="text-gray-300 mt-2">info@hitoshigoto.jp</p>
+              <h3 className="text-xl font-semibold mb-4">お問い合わせ</h3>
+              <p>お気軽にご連絡ください</p>
+              <p className="mt-2">info@hitoshigoto.jp</p>
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-gray-700 text-center">
-            <p className="text-gray-300">© 2023 ヒトシゴト. All rights reserved.</p>
+          <div className="mt-8 pt-8 border-t border-gray-700 text-center">
+            <p>© 2023 ヒトシゴト. All rights reserved.</p>
           </div>
         </div>
       </footer>
