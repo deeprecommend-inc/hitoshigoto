@@ -24,11 +24,11 @@ const Index = () => {
       <main className="container mx-auto mt-8 px-4">
         <section className="mb-16">
           <h1 className="text-5xl font-bold mb-6 text-center text-blue-600">ヒトシゴト事業</h1>
-          <Carousel className="w-full max-w-4xl mx-auto">
+          <Carousel className="w-full">
             <CarouselContent>
               {images.map((src, index) => (
                 <CarouselItem key={index}>
-                  <img src={src} alt={`Hito Shigoto ${index + 1}`} className="w-full h-96 object-cover rounded-lg shadow-lg" />
+                  <img src={src} alt={`Hito Shigoto ${index + 1}`} className="w-full h-auto object-cover rounded-lg shadow-lg" />
                 </CarouselItem>
               ))}
             </CarouselContent>
