@@ -13,14 +13,10 @@ const Index = () => {
   };
 
   const images = [
-    "/image1.jpg",
-    "/image2.jpg",
-    "/image3.jpg",
-    "/image4.jpg",
-    "/image5.jpg",
-    "/image6.jpg",
-    "/image7.jpg",
-    "/image8.jpg",
+    "https://source.unsplash.com/random/1920x1080?business",
+    "https://source.unsplash.com/random/1920x1080?office",
+    "https://source.unsplash.com/random/1920x1080?meeting",
+    "https://source.unsplash.com/random/1920x1080?teamwork",
   ];
 
   return (
