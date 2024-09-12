@@ -13,14 +13,10 @@ const Index = () => {
   };
 
   const images = [
-    "/image1.jpg",
-    "/image2.jpg",
-    "/image3.jpg",
-    "/image4.jpg",
-    "/image5.jpg",
-    "/image6.jpg",
-    "/image7.jpg",
-    "/image8.jpg",
+    "https://via.placeholder.com/1920x1080.png?text=Meeting",
+    "https://via.placeholder.com/1920x1080.png?text=Teamwork",
+    "https://via.placeholder.com/1920x1080.png?text=Business",
+    "https://via.placeholder.com/1920x1080.png?text=Office",
   ];
 
   return (
