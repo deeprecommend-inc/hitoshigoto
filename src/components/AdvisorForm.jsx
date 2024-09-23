@@ -2,9 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
 
 const AdvisorForm = () => {
   const handleSubmit = (e) => {
@@ -21,7 +19,7 @@ const AdvisorForm = () => {
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">氏名</label>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">お名前</label>
             <Input type="text" id="name" name="name" required />
           </div>
           <div>
@@ -33,38 +31,12 @@ const AdvisorForm = () => {
             <Input type="tel" id="phone" name="phone" required />
           </div>
           <div>
-            <label htmlFor="address" className="block text-sm font-medium text-gray-700">住所</label>
-            <Input type="text" id="address" name="address" required />
-          </div>
-          <div>
-            <label htmlFor="expertise" className="block text-sm font-medium text-gray-700">得意分野（もしくは業種）</label>
-            <Select id="expertise" name="expertise">
-              <SelectTrigger>
-                <SelectValue placeholder="選択してください" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="it">IT・技術</SelectItem>
-                <SelectItem value="finance">金融・財務</SelectItem>
-                <SelectItem value="marketing">マーケティング</SelectItem>
-                <SelectItem value="hr">人事・労務</SelectItem>
-                <SelectItem value="legal">法務</SelectItem>
-                <SelectItem value="other">その他</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <label htmlFor="experience" className="block text-sm font-medium text-gray-700">過去実績（任意）</label>
-            <Textarea id="experience" name="experience" rows={3} />
+            <label htmlFor="expertise" className="block text-sm font-medium text-gray-700">専門分野</label>
+            <Input type="text" id="expertise" name="expertise" required />
           </div>
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-700">メッセージ</label>
             <Textarea id="message" name="message" rows={4} required />
-          </div>
-          <div className="flex items-center space-x-2">
-            <Checkbox id="privacy" required />
-            <label htmlFor="privacy" className="text-sm text-gray-700">
-              <a href="/privacy-policy" className="text-blue-600 hover:underline">プライバシーポリシー</a>に同意します
-            </label>
           </div>
           <Button type="submit" className="w-full">登録する</Button>
         </form>
