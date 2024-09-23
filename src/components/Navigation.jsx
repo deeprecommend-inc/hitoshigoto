@@ -7,13 +7,15 @@ const Navigation = () => {
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600">ヒトシゴト</Link>
+          <Link to="/" className="text-2xl font-bold text-blue-600">めでぃかるえいど</Link>
           <ul className="flex space-x-4">
             <li><Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">ホーム</Link></li>
-            <li><Link to="/advisor-matching" className="text-gray-600 hover:text-blue-600 transition-colors">顧問アドバイザー</Link></li>
-            <li><Link to="/corporate-matching" className="text-gray-600 hover:text-blue-600 transition-colors">企業様向け</Link></li>
+            <li><Link to="/cases" className="text-gray-600 hover:text-blue-600 transition-colors">事例</Link></li>
+            <li><Link to="/advisor" className="text-gray-600 hover:text-blue-600 transition-colors">アドバイザー</Link></li>
+            <li><Link to="/corporate" className="text-gray-600 hover:text-blue-600 transition-colors">企業様</Link></li>
+            <li><Link to="/alliance" className="text-gray-600 hover:text-blue-600 transition-colors">アライアンス</Link></li>
+            <li><Link to="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">お問い合わせ</Link></li>
           </ul>
-          <Button variant="outline">お問い合わせ</Button>
         </div>
       </div>
     </nav>
