@@ -7,13 +7,13 @@ const Navigation = () => {
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600">めでぃかるえいど</Link>
-          <div className="flex items-center space-x-4">
-            <Link to="/login" className="text-gray-600 hover:text-blue-600 transition-colors">ログイン</Link>
-            <Link to="/register">
-              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">新規登録</Button>
-            </Link>
-          </div>
+          <Link to="/" className="text-2xl font-bold text-blue-600">ヒトシゴト</Link>
+          <ul className="flex space-x-4">
+            <li><Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">ホーム</Link></li>
+            <li><Link to="/advisor-matching" className="text-gray-600 hover:text-blue-600 transition-colors">顧問アドバイザー</Link></li>
+            <li><Link to="/corporate-matching" className="text-gray-600 hover:text-blue-600 transition-colors">企業様向け</Link></li>
+          </ul>
+          <Button variant="outline">お問い合わせ</Button>
         </div>
       </div>
     </nav>
