@@ -5,12 +5,12 @@ const PrivacyPolicy = () => {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">プライバシーポリシー</h1>
       <p className="mb-4">
-        株式会社顧問名鑑（以下「当社」）は、当社が行う事業活動全てにおいて個人情報を含む情報管理が極めて重要であると認識し、当社として個人情報保護方針を定め、個人情報の適切な管理を行い、責任ある対応を行って参ります。
+        株式会社ヒトシゴト（以下「当社」）は、当社が行う事業活動全てにおいて個人情報を含む情報管理が極めて重要であると認識し、当社として個人情報保護方針を定め、個人情報の適切な管理を行い、責任ある対応を行って参ります。
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4">個人情報保護方針</h2>
       <p className="mb-4">
-        株式会社顧問名鑑（以下「当社」）は顧問名鑑サービス事業及び広報活動を継続するうえで、次の個人情報保護方針を定め、実施していくことをお約束します。
+        株式会社ヒトシゴト（以下「当社」）は人材紹介サービス事業及び広報活動を継続するうえで、次の個人情報保護方針を定め、実施していくことをお約束します。
         この方針は当社の全役員及び従業員が一体となって取り組んでいくものであり、当社のビジネスに関わる方々にもこの個人情報保護方針への理解と協力を求めていくことで、個人情報の適切な保護に努めて参ります。
       </p>
 
@@ -25,12 +25,12 @@ const PrivacyPolicy = () => {
       <h3 className="text-xl font-semibold mt-4 mb-2">苦情・相談及びお問い合わせ</h3>
       <p className="mb-4">
         個人情報保護管理事務局<br />
-        電話：03-3275-6666<br />
-        e-mail：privacy@komon.co.jp
+        電話：03-XXXX-XXXX<br />
+        e-mail：privacy@hitoshigoto.co.jp
       </p>
 
       <p className="mb-4">
-        制定日：2009年2月2日　　改正日：2022年8月25日
+        制定日：20XX年X月X日　　改正日：20XX年X月X日
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4">1. お預かりした個人情報の利用目的</h2>
@@ -125,6 +125,11 @@ const PrivacyPolicy = () => {
       <p className="mb-4">
         なお、当社は、当社の広告の配信を委託するYahoo! JAPANへの委託に基づき、Yahoo!JAPANを経由して、当社のクッキーを保存し、参照する場合があります。
       </p>
+    </div>
+  );
+};
+
+export default PrivacyPolicy;
     </div>
   );
 };
