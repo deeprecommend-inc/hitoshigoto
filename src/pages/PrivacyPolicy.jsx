@@ -130,8 +130,3 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
-    </div>
-  );
-};
-
-export default PrivacyPolicy;
