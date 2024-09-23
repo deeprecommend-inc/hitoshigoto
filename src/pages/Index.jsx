@@ -3,23 +3,11 @@ import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PhoneCall } from 'lucide-react';
+import SimpleContactForm from '../components/SimpleContactForm';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">ヒトシゴト</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><Link to="/" className="text-gray-600 hover:text-blue-600">ホーム</Link></li>
-              <li><Link to="/about" className="text-gray-600 hover:text-blue-600">会社概要</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-blue-600">お問い合わせ</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
       <main className="container mx-auto mt-8 px-4">
         <section className="mb-16">
           <div className="grid grid-cols-2 gap-8">
@@ -140,16 +128,8 @@ const Index = () => {
         </section>
 
         <section className="mb-16">
-          <Card className="bg-blue-600 text-white">
-            <CardContent className="p-8 text-center">
-              <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
-              <p className="text-lg mb-8">サービスに関するご質問やご相談は、お気軽にお問い合わせください。</p>
-              <div className="flex justify-center items-center">
-                <PhoneCall className="mr-2" />
-                <span className="text-2xl font-bold">03-3275-6666</span>
-              </div>
-            </CardContent>
-          </Card>
+          <h2 className="text-3xl font-bold mb-8 text-center">お問い合わせ</h2>
+          <SimpleContactForm />
         </section>
       </main>
 
