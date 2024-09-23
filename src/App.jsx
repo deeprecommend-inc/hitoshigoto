@@ -14,12 +14,30 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <BrowserRouter>
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/advisor-matching" element={<AdvisorMatching />} />
-          <Route path="/corporate-matching" element={<CorporateMatching />} />
-        </Routes>
+        <div className="flex flex-col min-h-screen">
+          <Navigation />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/advisor-matching" element={<AdvisorMatching />} />
+              <Route path="/corporate-matching" element={<CorporateMatching />} />
+            </Routes>
+          </main>
+          <footer className="bg-gray-800 text-white py-8">
+            <div className="container mx-auto px-4">
+              <div className="flex justify-between items-center">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">ヒトシゴト</h3>
+                  <p>あなたのスキルと経験を活かす、新しい働き方のプラットフォーム</p>
+                </div>
+                <div>
+                  <p>お問い合わせ: 03-3275-6666</p>
+                  <p>営業時間: 平日 9:00-18:00</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
