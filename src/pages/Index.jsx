@@ -1,81 +1,192 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
-import SimpleContactForm from '../components/SimpleContactForm';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { PhoneCall } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
+      <header className="bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold">ヒトシゴト</h1>
+          <nav>
+            <ul className="flex space-x-4">
+              <li><Link to="/" className="text-gray-600 hover:text-blue-600">ホーム</Link></li>
+              <li><Link to="/about" className="text-gray-600 hover:text-blue-600">会社概要</Link></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-blue-600">お問い合わせ</Link></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
       <main className="container mx-auto mt-8 px-4">
         <section className="mb-16">
-          <h1 className="text-5xl font-bold mb-6 text-center text-blue-600">ヒトシゴト</h1>
-          <p className="mt-6 mb-8 text-center text-xl text-gray-600">
-            企業と人材をつなぐ革新的な人材紹介サービス
-          </p>
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-4xl font-bold mb-4">経営顧問の力を引き出し、<br />事業拡大・改善をサポート</h2>
+              <p className="text-lg mb-8">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。</p>
+              <div className="grid grid-cols-2 gap-4">
+                <Button className="bg-blue-600 text-white">顧問を探す</Button>
+                <Button variant="outline">顧問に登録</Button>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img src="/advisor1.jpg" alt="Advisor 1" className="w-full h-full object-cover" />
+              <img src="/advisor2.jpg" alt="Advisor 2" className="w-full h-full object-cover" />
+              <img src="/advisor3.jpg" alt="Advisor 3" className="w-full h-full object-cover" />
+              <img src="/advisor4.jpg" alt="Advisor 4" className="w-full h-full object-cover" />
+            </div>
+          </div>
         </section>
 
         <section className="mb-16">
-          <Card>
-            <CardHeader>
-              <CardTitle>会社概要</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="mb-4">ヒトシゴトは、企業と人材をマッチングする革新的な人材紹介サービスです。私たちは、企業の人材ニーズと求職者のキャリア目標を効率的に結びつけ、双方にとって価値ある関係性を構築します。</p>
-              <p className="mb-4">私たちのミッションは、企業の成長を加速させ、個人のキャリアを最大限に支援することです。そのために、最先端のマッチング技術と丁寧なサポートを提供しています。</p>
-              <p>ヒトシゴトは、ビジネスの未来を創造し、より効率的で革新的な労働市場の実現に貢献します。</p>
-            </CardContent>
-          </Card>
-        </section>
-
-        <section className="mb-16">
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle>求職者の方へ</CardTitle>
-                <CardDescription>キャリアアップのチャンスがここに</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc list-inside mb-4 text-gray-600">
-                  <li>豊富な求人情報</li>
-                  <li>キャリアカウンセリング</li>
-                  <li>スキルアップ支援</li>
-                  <li>柔軟な働き方の提案</li>
-                </ul>
+          <h2 className="text-3xl font-bold mb-8 text-center">事例紹介</h2>
+          <div className="grid grid-cols-2 gap-8">
+            <Card className="bg-gray-100">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">経営課題を解決したい</h3>
+                <p>経営課題の解決に向けて、専門家のアドバイスを受けられます。</p>
               </CardContent>
-              <CardFooter>
-                <Link to="/job-seeker-registration">
-                  <Button>求職者登録</Button>
-                </Link>
-              </CardFooter>
             </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>企業様へ</CardTitle>
-                <CardDescription>最適な人材をご紹介します</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc list-inside mb-4 text-gray-600">
-                  <li>豊富な人材データベース</li>
-                  <li>効率的なマッチングシステム</li>
-                  <li>採用コンサルティング</li>
-                  <li>長期的なサポート</li>
-                </ul>
+            <Card className="bg-gray-100">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">新規事業を立ち上げたい</h3>
+                <p>新規事業の立ち上げに関する戦略立案や実行支援を行います。</p>
               </CardContent>
-              <CardFooter>
-                <Link to="/corporate-registration">
-                  <Button>企業様登録</Button>
-                </Link>
-              </CardFooter>
             </Card>
           </div>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">お問い合わせ</h2>
-          <SimpleContactForm />
+          <h2 className="text-3xl font-bold mb-8">実績紹介</h2>
+          <div className="grid grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-4">国内最大の経営者データベース</h3>
+              <p className="text-lg mb-4">30,000名超の経営者データを保有しています。</p>
+            </div>
+            <div>
+              <img src="/database-image.jpg" alt="Database" className="w-full h-auto object-cover" />
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">サービスの特徴</h2>
+          <div className="grid grid-cols-4 gap-8">
+            {[
+              { icon: "👥", title: "豊富な人材" },
+              { icon: "🤝", title: "マッチング" },
+              { icon: "💼", title: "経験豊富" },
+              { icon: "🌟", title: "高品質" },
+              { icon: "📊", title: "データ分析" },
+              { icon: "🔒", title: "セキュリティ" },
+              { icon: "📝", title: "契約サポート" },
+              { icon: "🌐", title: "グローバル" },
+              { icon: "📚", title: "教育支援" },
+              { icon: "💡", title: "イノベーション" },
+              { icon: "📈", title: "成長支援" },
+              { icon: "🤖", title: "AI活用" },
+            ].map((feature, index) => (
+              <Card key={index}>
+                <CardContent className="p-4 text-center">
+                  <div className="text-4xl mb-2">{feature.icon}</div>
+                  <h3 className="font-semibold">{feature.title}</h3>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center">顧問紹介</h2>
+          <div className="grid grid-cols-3 gap-8">
+            {[
+              { name: "山田 太郎", role: "経営戦略アドバイザー", image: "/advisor1.jpg" },
+              { name: "鈴木 花子", role: "マーケティング専門家", image: "/advisor2.jpg" },
+              { name: "佐藤 次郎", role: "財務コンサルタント", image: "/advisor3.jpg" },
+            ].map((advisor, index) => (
+              <Card key={index}>
+                <CardContent className="p-4 text-center">
+                  <img src={advisor.image} alt={advisor.name} className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
+                  <h3 className="font-semibold">{advisor.name}</h3>
+                  <p className="text-gray-600">{advisor.role}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Button>顧問一覧を見る</Button>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="grid grid-cols-2 gap-8">
+            <Card className="bg-gray-100">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">顧問をお探しの方</h3>
+                <p className="mb-4">経営課題の解決に向けて、最適な顧問をご紹介します。</p>
+                <Button>顧問を探す</Button>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-100">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">顧問に登録したい方</h3>
+                <p className="mb-4">あなたの経験とスキルを活かして、企業の成長をサポートしませんか？</p>
+                <Button>顧問に登録</Button>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <Card className="bg-blue-600 text-white">
+            <CardContent className="p-8 text-center">
+              <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
+              <p className="text-lg mb-8">サービスに関するご質問やご相談は、お気軽にお問い合わせください。</p>
+              <div className="flex justify-center items-center">
+                <PhoneCall className="mr-2" />
+                <span className="text-2xl font-bold">03-3275-6666</span>
+              </div>
+            </CardContent>
+          </Card>
         </section>
       </main>
+
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">ヒトシゴト</h3>
+              <p>革新的な人材紹介サービスを提供</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">サービス</h4>
+              <ul>
+                <li><Link to="/services" className="hover:text-blue-300">顧問紹介</Link></li>
+                <li><Link to="/services" className="hover:text-blue-300">人材紹介</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">会社情報</h4>
+              <ul>
+                <li><Link to="/about" className="hover:text-blue-300">会社概要</Link></li>
+                <li><Link to="/contact" className="hover:text-blue-300">お問い合わせ</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">法的情報</h4>
+              <ul>
+                <li><Link to="/privacy-policy" className="hover:text-blue-300">プライバシーポリシー</Link></li>
+                <li><Link to="/terms" className="hover:text-blue-300">利用規約</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <p>&copy; 2024 ヒトシゴト All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
