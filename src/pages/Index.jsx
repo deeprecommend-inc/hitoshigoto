@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
+import SimpleContactForm from '../components/SimpleContactForm';
 
 const Index = () => {
   return (
@@ -66,6 +67,11 @@ const Index = () => {
               </CardFooter>
             </Card>
           </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold mb-6 text-center">お問い合わせ</h2>
+          <SimpleContactForm />
         </section>
       </main>
     </div>
