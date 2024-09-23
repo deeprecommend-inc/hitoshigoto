@@ -10,6 +10,7 @@ import CorporateRegistration from "./pages/CorporateRegistration";
 import Alliance from "./pages/Alliance";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { Link } from "react-router-dom";
 
 const queryClient = new QueryClient();
 
