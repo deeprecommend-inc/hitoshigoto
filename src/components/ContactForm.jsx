@@ -26,7 +26,7 @@ const ContactForm = () => {
         formData,
         'YOUR_USER_ID' // EmailJSのユーザーID
       );
-      toast.success('お問い合わせが送信されました。');
+      toast.success('お問い合わせ送信が完了しました');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('Error sending email:', error);
